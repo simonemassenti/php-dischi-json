@@ -16,6 +16,8 @@ header{
 .wrapper{
     background-color: #1D2D3C;
     height: calc(100vh - 50px);
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container{
@@ -35,10 +37,37 @@ header{
     margin-right: 6rem;
     margin-top: .8rem;
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
 }
 
 .author{
     font-weight: 400;
 }
 
+.container-info {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    background-color:rgba(6, 19, 31, .8);
+    color: white;
+}
+
+.info-card{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.close{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
