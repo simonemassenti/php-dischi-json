@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-</head>
-<body>
-    
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+
+        </header>
+
+        <div class="wrapper">
+            <div class="container">
+                <div class="card" v-for="disc in discs">
+                    <img :src="disc.poster" :alt="disc.title">
+                    <h5 class="title" >{{ disc.title }}</h5>
+                    <h6 class="author">{{ disc.author }}</h6>
+                    <h5 class="year">{{ disc.year }}</h5>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
     <script src="js/script.js"></script>
 </body>
+
 </html>
