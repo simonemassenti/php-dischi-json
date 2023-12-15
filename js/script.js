@@ -7,7 +7,8 @@ createApp({
             discs: [],
             info: {
                 index: 0,
-                active: false
+                active: false,
+                disc: {}
             }
         }
     },
@@ -21,6 +22,11 @@ createApp({
         showInfo(i){
             this.info.index = i;
             this.info.active = true;
+            axios.get(this.apiURL)
+        .then((resp)=>{
+            this.info.disc = resp.data[this.info.index];
+            console.log(this.info.disc.poster);
+        });
         },
         closeInfo() {
             this.info.active = false;

@@ -28,10 +28,10 @@
 
             <div v-if="info.active" class="container-info">
                 <div class="info-card">
-                    <img :src="discs[info.index].poster" :alt="discs[info.index].title">
-                    <h5 class="title" >{{ discs[info.index].title }}</h5>
-                    <h6 class="author">{{ discs[info.index].author }}</h6>
-                    <h5 class="year">{{ discs[info.index].year }}</h5>
+                    <img :src="info.disc.poster" :alt="info.disc.title">
+                    <h5 class="title" >{{ info.disc.title }}</h5>
+                    <h6 class="author">{{ info.disc.author }}</h6>
+                    <h5 class="year">{{ info.disc.year }}</h5>
                 </div>
 
                 <div class="close" @click="closeInfo()">
